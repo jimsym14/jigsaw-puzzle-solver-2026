@@ -1,7 +1,0 @@
-Evaluation Results — Io
-=============================================
-Grid: 4×3  |  Tile: 124×124  |  Time: 0.5s
-
-Piece Placement Accuracy: 100.0%
-Rotation Accuracy:        100.0%
-Neighbor Accuracy:        100.0%
