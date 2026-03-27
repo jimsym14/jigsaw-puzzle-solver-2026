@@ -117,17 +117,35 @@ results/I2/
 
 **Ablation comparison (Stage 4, I2)**
 
-![Ablation Comparison I2](results/I2/Stage_4_Ablation/ablation_comparison.png)
+<figure>
+  <img src="results/I2/Stage_4_Ablation/ablation_comparison.png" alt="Ablation Comparison I2" width="720">
+  <figcaption><em>Figure: Comparative ablation summary for I2 across all feature configurations.</em></figcaption>
+</figure>
 
 **Ablation outputs per configuration (I2)**
 
-![Classical I2](results/I2/Stage_4_Ablation/classical/solved_classical.jpg)
-
-![Deep Only I2](results/I2/Stage_4_Ablation/deep_only/solved_deep_only.jpg)
-
-![No Local I2](results/I2/Stage_4_Ablation/no_local/solved_no_local.jpg)
-
-![Combined I2](results/I2/Stage_4_Ablation/combined/solved_combined.jpg)
+<table>
+  <tr>
+    <td align="center">
+      <img src="results/I2/Stage_4_Ablation/classical/solved_classical.jpg" alt="Classical I2" width="300"><br>
+      <em>Classical descriptors (pixels, color, texture, local).</em>
+    </td>
+    <td align="center">
+      <img src="results/I2/Stage_4_Ablation/deep_only/solved_deep_only.jpg" alt="Deep Only I2" width="300"><br>
+      <em>Deep-only descriptors (CNN embedding).</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="results/I2/Stage_4_Ablation/no_local/solved_no_local.jpg" alt="No Local I2" width="300"><br>
+      <em>Without local keypoints (Harris/SIFT removed).</em>
+    </td>
+    <td align="center">
+      <img src="results/I2/Stage_4_Ablation/combined/solved_combined.jpg" alt="Combined I2" width="300"><br>
+      <em>Combined descriptors (classical + deep).</em>
+    </td>
+  </tr>
+</table>
 
 ### Documentation
 
@@ -221,17 +239,35 @@ results/I2/
 
 **Σύγκριση ablation (Stage 4, I2)**
 
-![Σύγκριση Ablation I2](results/I2/Stage_4_Ablation/ablation_comparison.png)
+<figure>
+  <img src="results/I2/Stage_4_Ablation/ablation_comparison.png" alt="Σύγκριση Ablation I2" width="720">
+  <figcaption><em>Σχήμα: Συνοπτική σύγκριση όλων των ρυθμίσεων ablation για την εικόνα I2.</em></figcaption>
+</figure>
 
 **Ablation αποτελέσματα ανά configuration (I2)**
 
-![Classical I2](results/I2/Stage_4_Ablation/classical/solved_classical.jpg)
-
-![Deep Only I2](results/I2/Stage_4_Ablation/deep_only/solved_deep_only.jpg)
-
-![No Local I2](results/I2/Stage_4_Ablation/no_local/solved_no_local.jpg)
-
-![Combined I2](results/I2/Stage_4_Ablation/combined/solved_combined.jpg)
+<table>
+  <tr>
+    <td align="center">
+      <img src="results/I2/Stage_4_Ablation/classical/solved_classical.jpg" alt="Classical I2" width="300"><br>
+      <em>Classical descriptors (pixels, color, texture, local).</em>
+    </td>
+    <td align="center">
+      <img src="results/I2/Stage_4_Ablation/deep_only/solved_deep_only.jpg" alt="Deep Only I2" width="300"><br>
+      <em>Deep-only descriptors (CNN embedding).</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="results/I2/Stage_4_Ablation/no_local/solved_no_local.jpg" alt="No Local I2" width="300"><br>
+      <em>Χωρίς τοπικά σημεία (Harris/SIFT).</em>
+    </td>
+    <td align="center">
+      <img src="results/I2/Stage_4_Ablation/combined/solved_combined.jpg" alt="Combined I2" width="300"><br>
+      <em>Συνδυασμός classical + deep χαρακτηριστικών.</em>
+    </td>
+  </tr>
+</table>
 
 ### Τεκμηρίωση
 
