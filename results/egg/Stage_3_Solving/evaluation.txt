@@ -1,0 +1,7 @@
+Evaluation Results — egg
+=============================================
+Grid: 4×3  |  Tile: 111×111  |  Time: 0.5s
+
+Piece Placement Accuracy: 16.7%
+Rotation Accuracy:        0.0%
+Neighbor Accuracy:        0.0%
