@@ -1,5 +1,0 @@
-config,placement_%,rotation_%,neighbor_%,time_s
-classical,100.00,100.00,100.00,0.3
-deep_only,100.00,100.00,100.00,0.1
-no_local,100.00,100.00,100.00,0.4
-combined,100.00,100.00,100.00,0.4
