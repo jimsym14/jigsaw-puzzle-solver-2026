@@ -1,7 +1,0 @@
-Evaluation Results — I1
-=============================================
-Grid: 3×5  |  Tile: 110×110  |  Time: 1.0s
-
-Piece Placement Accuracy: 100.0%
-Rotation Accuracy:        100.0%
-Neighbor Accuracy:        100.0%
