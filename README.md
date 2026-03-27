@@ -1,110 +1,121 @@
 # Lost in Pieces — Image Jigsaw Reconstruction
 
-Hybrid computer vision pipeline that solves shuffled + rotated image puzzles.
+Hybrid computer vision pipeline for reconstructing shuffled and rotated image puzzles.
 
 ---
 
-## 🇬🇧 English (Short)
+## English
 
-### What this project does
-It rebuilds an image from square tiles that are mixed and randomly rotated.
+### Overview
 
-### How it works (simple)
-1. **Stage 1:** split image into tiles, shuffle, rotate.
-2. **Stage 2:** extract features (color, texture, local points, edges, deep features).
-3. **Stage 3:** place tiles with greedy search + local improvement.
-4. **Stage 4 (optional):** ablation study to compare feature sets.
+This project reconstructs an image from square tiles that are randomly shuffled and rotated.
 
-### Main results
+### Method
+
+The pipeline has four stages:
+
+1. **Stage 1 — Shuffling:** image crop, grid creation, tiling, shuffling, rotation.
+2. **Stage 2 — Features:** extraction of color, texture, local, edge, and deep descriptors.
+3. **Stage 3 — Solving:** greedy multi-start search with local optimization.
+4. **Stage 4 — Ablation (optional):** comparison of feature configurations.
+
+### Main Results
+
 - **6/7 images:** `100%` placement, `100%` rotation, `100%` neighbor accuracy.
-- **`egg.jpg`:** difficult/ambiguous case (`16.7%`, `0%`, `0%`) as explained in the report.
+- **`egg.jpg`:** `16.7%`, `0%`, `0%` (low seam-information case, discussed in the report).
 
-### Quick setup
+### Installation
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Quick run
+### Usage
+
 ```bash
-# Single image
+# Solve one image
 python main.py --image I2.jpg --seed 42
 
-# All images
+# Run full batch
 python main.py --all --seed 42
 
-# Ablation
+# Run ablation for one image
 python ablation.py --image egg.jpg --seed 42
 
-# GUI
+# Launch GUI
 python gui.py
 ```
 
-### Output folders
-Each run writes results to `results/<image_name>/`:
+### Output Structure
+
+Each run writes outputs to `results/<image_name>/`:
+
 - `Stage_1_Shuffling/`
 - `Stage_2_Features/`
 - `Stage_3_Solving/`
-- `Stage_4_Ablation/` (optional)
+- `Stage_4_Ablation/` (if enabled)
 
-### Resume value
-- End-to-end CV pipeline
-- Classical + deep feature fusion
-- Reproducible experiments and evaluation
+### Documentation
+
+Detailed methodology and experiments: `report/report.pdf`.
 
 ---
 
-## 🇬🇷 Ελληνικά (Σύντομο)
+## Ελληνικά
 
-### Τι κάνει
-Ανακατασκευάζει εικόνα από τετράγωνα κομμάτια που έχουν ανακατευτεί και περιστραφεί τυχαία.
+### Περιγραφή
 
-### Πώς δουλεύει (απλά)
-1. **Stage 1:** κόψιμο σε tiles, ανακάτεμα, περιστροφές.
-2. **Stage 2:** εξαγωγή χαρακτηριστικών (χρώμα, texture, τοπικά σημεία, edges, deep).
-3. **Stage 3:** τοποθέτηση με greedy + τοπική βελτίωση.
-4. **Stage 4 (προαιρετικό):** ablation για σύγκριση χαρακτηριστικών.
+Το project ανασυνθέτει εικόνα από τετράγωνα κομμάτια που έχουν ανακατευτεί και περιστραφεί τυχαία.
 
-### Βασικά αποτελέσματα
+### Μεθοδολογία
+
+Η ροή έχει τέσσερα στάδια:
+
+1. **Stage 1 — Shuffling:** crop εικόνας, δημιουργία grid, τεμαχισμός, ανακάτεμα, περιστροφή.
+2. **Stage 2 — Features:** εξαγωγή χαρακτηριστικών χρώματος, υφής, τοπικών σημείων, ακμών και deep embeddings.
+3. **Stage 3 — Solving:** greedy multi-start αναζήτηση και local search για βελτιστοποίηση.
+4. **Stage 4 — Ablation (προαιρετικό):** σύγκριση διαφορετικών συνδυασμών χαρακτηριστικών.
+
+### Βασικά Αποτελέσματα
+
 - **6/7 εικόνες:** `100%` θέση, `100%` περιστροφή, `100%` γειτνίαση.
-- **`egg.jpg`:** δύσκολη/αμφίσημη περίπτωση (`16.7%`, `0%`, `0%`), όπως αναλύεται στην αναφορά.
+- **`egg.jpg`:** `16.7%`, `0%`, `0%` (περίπτωση χαμηλής διακριτικής πληροφορίας, όπως αναλύεται στην αναφορά).
 
-### Γρήγορο setup
+### Εγκατάσταση
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Γρήγορη εκτέλεση
+### Εκτέλεση
+
 ```bash
-# Μία εικόνα
+# Επίλυση μίας εικόνας
 python main.py --image I2.jpg --seed 42
 
-# Όλες οι εικόνες
+# Batch εκτέλεση
 python main.py --all --seed 42
 
-# Ablation
+# Ablation για συγκεκριμένη εικόνα
 python ablation.py --image egg.jpg --seed 42
 
-# GUI
+# Εκκίνηση GUI
 python gui.py
 ```
 
-### Φάκελοι εξόδου
-Κάθε run γράφει στο `results/<image_name>/`:
+### Δομή Εξόδων
+
+Κάθε run αποθηκεύει αποτελέσματα στο `results/<image_name>/`:
+
 - `Stage_1_Shuffling/`
 - `Stage_2_Features/`
 - `Stage_3_Solving/`
-- `Stage_4_Ablation/` (προαιρετικό)
+- `Stage_4_Ablation/` (όταν ζητηθεί)
 
-### Για CV/Portfolio
-- Πλήρες pipeline Computer Vision
-- Συνδυασμός classical + deep χαρακτηριστικών
-- Καθαρά, μετρήσιμα αποτελέσματα
+### Τεκμηρίωση
 
----
-
-## Report
-Details and analysis: `report/report.pdf`.
+Αναλυτική περιγραφή πειραμάτων και μεθοδολογίας: `report/report.pdf`.
