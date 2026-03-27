@@ -8,6 +8,27 @@ Hybrid computer vision pipeline for reconstructing shuffled and rotated image pu
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Research%20Project-blue)
 
+## Table of Contents
+
+- [English](#english)
+  - [Overview](#overview)
+  - [Method](#method)
+  - [Main Results](#main-results)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Output Structure](#output-structure)
+  - [Visual Results](#visual-results)
+  - [Documentation](#documentation)
+- [Ελληνικά](#ελληνικά)
+  - [Περιγραφή](#περιγραφή)
+  - [Μεθοδολογία](#μεθοδολογία)
+  - [Βασικά Αποτελέσματα](#βασικά-αποτελέσματα)
+  - [Εγκατάσταση](#εγκατάσταση)
+  - [Εκτέλεση](#εκτέλεση)
+  - [Δομή Εξόδων](#δομή-εξόδων)
+  - [Ενδεικτικά Αποτελέσματα](#ενδεικτικά-αποτελέσματα)
+  - [Τεκμηρίωση](#τεκμηρίωση)
+
 ---
 
 ## English
@@ -56,39 +77,29 @@ python gui.py
 
 ### Output Structure
 
-Current outputs for `I1`, `I2`, `Io`, `Lena` are:
+Current output structure example (`I2`):
 
-- **`I1`**
-	- `results/I1/Stage_1_Shuffling/original_cropped.jpg`
-	- `results/I1/Stage_1_Shuffling/shuffled_puzzle.jpg`
-	- `results/I1/Stage_2_Features/avg_tile_histogram.png`
-	- `results/I1/Stage_3_Solving/solved_puzzle.jpg`
-	- `results/I1/Stage_3_Solving/compatibility_matrix.png`
-	- `results/I1/Stage_3_Solving/evaluation.txt`
-
-- **`I2`**
-	- `results/I2/Stage_1_Shuffling/original_cropped.jpg`
-	- `results/I2/Stage_1_Shuffling/shuffled_puzzle.jpg`
-	- `results/I2/Stage_2_Features/avg_tile_histogram.png`
-	- `results/I2/Stage_3_Solving/solved_puzzle.jpg`
-	- `results/I2/Stage_3_Solving/compatibility_matrix.png`
-	- `results/I2/Stage_3_Solving/evaluation.txt`
-
-- **`Io`**
-	- `results/Io/Stage_1_Shuffling/original_cropped.jpg`
-	- `results/Io/Stage_1_Shuffling/shuffled_puzzle.jpg`
-	- `results/Io/Stage_2_Features/avg_tile_histogram.png`
-	- `results/Io/Stage_3_Solving/solved_puzzle.jpg`
-	- `results/Io/Stage_3_Solving/compatibility_matrix.png`
-	- `results/Io/Stage_3_Solving/evaluation.txt`
-
-- **`Lena`**
-	- `results/Lena/Stage_1_Shuffling/original_cropped.jpg`
-	- `results/Lena/Stage_1_Shuffling/shuffled_puzzle.jpg`
-	- `results/Lena/Stage_2_Features/avg_tile_histogram.png`
-	- `results/Lena/Stage_3_Solving/solved_puzzle.jpg`
-	- `results/Lena/Stage_3_Solving/compatibility_matrix.png`
-	- `results/Lena/Stage_3_Solving/evaluation.txt`
+```text
+results/I2/
+  stage1.pkl
+  stage2.pkl
+  Stage_1_Shuffling/
+    original_cropped.jpg
+    shuffled_puzzle.jpg
+  Stage_2_Features/
+    avg_tile_histogram.png
+  Stage_3_Solving/
+    solved_puzzle.jpg
+    compatibility_matrix.png
+    evaluation.txt
+  Stage_4_Ablation/
+    ablation_results.csv
+    ablation_comparison.png
+    classical/solved_classical.jpg
+    deep_only/solved_deep_only.jpg
+    no_local/solved_no_local.jpg
+    combined/solved_combined.jpg
+```
 
 ### Visual Results
 
@@ -104,9 +115,19 @@ Current outputs for `I1`, `I2`, `Io`, `Lena` are:
 
 ![Compatibility Matrix](results/I2/Stage_3_Solving/compatibility_matrix.png)
 
-**Ablation comparison (Stage 4)**
+**Ablation comparison (Stage 4, I2)**
 
-![Ablation Comparison](results/egg/Stage_4_Ablation/ablation_comparison.png)
+![Ablation Comparison I2](results/I2/Stage_4_Ablation/ablation_comparison.png)
+
+**Ablation outputs per configuration (I2)**
+
+![Classical I2](results/I2/Stage_4_Ablation/classical/solved_classical.jpg)
+
+![Deep Only I2](results/I2/Stage_4_Ablation/deep_only/solved_deep_only.jpg)
+
+![No Local I2](results/I2/Stage_4_Ablation/no_local/solved_no_local.jpg)
+
+![Combined I2](results/I2/Stage_4_Ablation/combined/solved_combined.jpg)
 
 ### Documentation
 
@@ -160,39 +181,29 @@ python gui.py
 
 ### Δομή Εξόδων
 
-Τα τρέχοντα outputs για `I1`, `I2`, `Io`, `Lena` είναι:
+Παράδειγμα τρέχουσας δομής εξόδων (`I2`):
 
-- **`I1`**
-	- `results/I1/Stage_1_Shuffling/original_cropped.jpg`
-	- `results/I1/Stage_1_Shuffling/shuffled_puzzle.jpg`
-	- `results/I1/Stage_2_Features/avg_tile_histogram.png`
-	- `results/I1/Stage_3_Solving/solved_puzzle.jpg`
-	- `results/I1/Stage_3_Solving/compatibility_matrix.png`
-	- `results/I1/Stage_3_Solving/evaluation.txt`
-
-- **`I2`**
-	- `results/I2/Stage_1_Shuffling/original_cropped.jpg`
-	- `results/I2/Stage_1_Shuffling/shuffled_puzzle.jpg`
-	- `results/I2/Stage_2_Features/avg_tile_histogram.png`
-	- `results/I2/Stage_3_Solving/solved_puzzle.jpg`
-	- `results/I2/Stage_3_Solving/compatibility_matrix.png`
-	- `results/I2/Stage_3_Solving/evaluation.txt`
-
-- **`Io`**
-	- `results/Io/Stage_1_Shuffling/original_cropped.jpg`
-	- `results/Io/Stage_1_Shuffling/shuffled_puzzle.jpg`
-	- `results/Io/Stage_2_Features/avg_tile_histogram.png`
-	- `results/Io/Stage_3_Solving/solved_puzzle.jpg`
-	- `results/Io/Stage_3_Solving/compatibility_matrix.png`
-	- `results/Io/Stage_3_Solving/evaluation.txt`
-
-- **`Lena`**
-	- `results/Lena/Stage_1_Shuffling/original_cropped.jpg`
-	- `results/Lena/Stage_1_Shuffling/shuffled_puzzle.jpg`
-	- `results/Lena/Stage_2_Features/avg_tile_histogram.png`
-	- `results/Lena/Stage_3_Solving/solved_puzzle.jpg`
-	- `results/Lena/Stage_3_Solving/compatibility_matrix.png`
-	- `results/Lena/Stage_3_Solving/evaluation.txt`
+```text
+results/I2/
+  stage1.pkl
+  stage2.pkl
+  Stage_1_Shuffling/
+    original_cropped.jpg
+    shuffled_puzzle.jpg
+  Stage_2_Features/
+    avg_tile_histogram.png
+  Stage_3_Solving/
+    solved_puzzle.jpg
+    compatibility_matrix.png
+    evaluation.txt
+  Stage_4_Ablation/
+    ablation_results.csv
+    ablation_comparison.png
+    classical/solved_classical.jpg
+    deep_only/solved_deep_only.jpg
+    no_local/solved_no_local.jpg
+    combined/solved_combined.jpg
+```
 
 ### Ενδεικτικά Αποτελέσματα
 
@@ -208,9 +219,19 @@ python gui.py
 
 ![Πίνακας Συμβατότητας](results/I2/Stage_3_Solving/compatibility_matrix.png)
 
-**Σύγκριση ablation (Stage 4)**
+**Σύγκριση ablation (Stage 4, I2)**
 
-![Σύγκριση Ablation](results/egg/Stage_4_Ablation/ablation_comparison.png)
+![Σύγκριση Ablation I2](results/I2/Stage_4_Ablation/ablation_comparison.png)
+
+**Ablation αποτελέσματα ανά configuration (I2)**
+
+![Classical I2](results/I2/Stage_4_Ablation/classical/solved_classical.jpg)
+
+![Deep Only I2](results/I2/Stage_4_Ablation/deep_only/solved_deep_only.jpg)
+
+![No Local I2](results/I2/Stage_4_Ablation/no_local/solved_no_local.jpg)
+
+![Combined I2](results/I2/Stage_4_Ablation/combined/solved_combined.jpg)
 
 ### Τεκμηρίωση
 
