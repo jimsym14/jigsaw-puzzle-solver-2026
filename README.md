@@ -2,6 +2,12 @@
 
 Hybrid computer vision pipeline for reconstructing shuffled and rotated image puzzles.
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.x-5C3EE8?logo=opencv&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Research%20Project-blue)
+
 ---
 
 ## English
@@ -56,6 +62,24 @@ Each run writes outputs to `results/<image_name>/`:
 - `Stage_2_Features/`
 - `Stage_3_Solving/`
 - `Stage_4_Ablation/` (if enabled)
+
+### Visual Results
+
+**Shuffled puzzle (Stage 1)**
+
+![Shuffled Puzzle](results/I2/Stage_1_Shuffling/shuffled_puzzle.jpg)
+
+**Solved puzzle (Stage 3)**
+
+![Solved Puzzle](results/I2/Stage_3_Solving/solved_puzzle.jpg)
+
+**Compatibility matrix (Stage 3)**
+
+![Compatibility Matrix](results/I2/Stage_3_Solving/compatibility_matrix.png)
+
+**Ablation comparison (Stage 4)**
+
+![Ablation Comparison](results/egg/Stage_4_Ablation/ablation_comparison.png)
 
 ### Documentation
 
@@ -115,6 +139,24 @@ python gui.py
 - `Stage_2_Features/`
 - `Stage_3_Solving/`
 - `Stage_4_Ablation/` (όταν ζητηθεί)
+
+### Ενδεικτικά Αποτελέσματα
+
+**Ανακατεμένο παζλ (Stage 1)**
+
+![Ανακατεμένο Παζλ](results/I2/Stage_1_Shuffling/shuffled_puzzle.jpg)
+
+**Τελική ανασύνθεση (Stage 3)**
+
+![Τελική Ανασύνθεση](results/I2/Stage_3_Solving/solved_puzzle.jpg)
+
+**Πίνακας συμβατότητας (Stage 3)**
+
+![Πίνακας Συμβατότητας](results/I2/Stage_3_Solving/compatibility_matrix.png)
+
+**Σύγκριση ablation (Stage 4)**
+
+![Σύγκριση Ablation](results/egg/Stage_4_Ablation/ablation_comparison.png)
 
 ### Τεκμηρίωση
 
