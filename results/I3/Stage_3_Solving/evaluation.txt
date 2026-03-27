@@ -1,0 +1,7 @@
+Evaluation Results — I3
+=============================================
+Grid: 3×3  |  Tile: 174×174  |  Time: 0.2s
+
+Piece Placement Accuracy: 100.0%
+Rotation Accuracy:        100.0%
+Neighbor Accuracy:        100.0%

@@ -1,0 +1,7 @@
+Evaluation Results — Lena
+=============================================
+Grid: 3×3  |  Tile: 85×85  |  Time: 0.2s
+
+Piece Placement Accuracy: 100.0%
+Rotation Accuracy:        100.0%
+Neighbor Accuracy:        100.0%
