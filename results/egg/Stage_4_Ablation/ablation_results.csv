@@ -1,0 +1,5 @@
+config,placement_%,rotation_%,neighbor_%,time_s
+classical,8.33,0.00,0.00,0.3
+deep_only,16.67,0.00,0.00,0.1
+no_local,16.67,0.00,0.00,0.4
+combined,16.67,0.00,0.00,0.5
