@@ -56,12 +56,39 @@ python gui.py
 
 ### Output Structure
 
-Each run writes outputs to `results/<image_name>/`:
+Current outputs for `I1`, `I2`, `Io`, `Lena` are:
 
-- `Stage_1_Shuffling/`
-- `Stage_2_Features/`
-- `Stage_3_Solving/`
-- `Stage_4_Ablation/` (if enabled)
+- **`I1`**
+	- `results/I1/Stage_1_Shuffling/original_cropped.jpg`
+	- `results/I1/Stage_1_Shuffling/shuffled_puzzle.jpg`
+	- `results/I1/Stage_2_Features/avg_tile_histogram.png`
+	- `results/I1/Stage_3_Solving/solved_puzzle.jpg`
+	- `results/I1/Stage_3_Solving/compatibility_matrix.png`
+	- `results/I1/Stage_3_Solving/evaluation.txt`
+
+- **`I2`**
+	- `results/I2/Stage_1_Shuffling/original_cropped.jpg`
+	- `results/I2/Stage_1_Shuffling/shuffled_puzzle.jpg`
+	- `results/I2/Stage_2_Features/avg_tile_histogram.png`
+	- `results/I2/Stage_3_Solving/solved_puzzle.jpg`
+	- `results/I2/Stage_3_Solving/compatibility_matrix.png`
+	- `results/I2/Stage_3_Solving/evaluation.txt`
+
+- **`Io`**
+	- `results/Io/Stage_1_Shuffling/original_cropped.jpg`
+	- `results/Io/Stage_1_Shuffling/shuffled_puzzle.jpg`
+	- `results/Io/Stage_2_Features/avg_tile_histogram.png`
+	- `results/Io/Stage_3_Solving/solved_puzzle.jpg`
+	- `results/Io/Stage_3_Solving/compatibility_matrix.png`
+	- `results/Io/Stage_3_Solving/evaluation.txt`
+
+- **`Lena`**
+	- `results/Lena/Stage_1_Shuffling/original_cropped.jpg`
+	- `results/Lena/Stage_1_Shuffling/shuffled_puzzle.jpg`
+	- `results/Lena/Stage_2_Features/avg_tile_histogram.png`
+	- `results/Lena/Stage_3_Solving/solved_puzzle.jpg`
+	- `results/Lena/Stage_3_Solving/compatibility_matrix.png`
+	- `results/Lena/Stage_3_Solving/evaluation.txt`
 
 ### Visual Results
 
@@ -133,12 +160,39 @@ python gui.py
 
 ### Δομή Εξόδων
 
-Κάθε run αποθηκεύει αποτελέσματα στο `results/<image_name>/`:
+Τα τρέχοντα outputs για `I1`, `I2`, `Io`, `Lena` είναι:
 
-- `Stage_1_Shuffling/`
-- `Stage_2_Features/`
-- `Stage_3_Solving/`
-- `Stage_4_Ablation/` (όταν ζητηθεί)
+- **`I1`**
+	- `results/I1/Stage_1_Shuffling/original_cropped.jpg`
+	- `results/I1/Stage_1_Shuffling/shuffled_puzzle.jpg`
+	- `results/I1/Stage_2_Features/avg_tile_histogram.png`
+	- `results/I1/Stage_3_Solving/solved_puzzle.jpg`
+	- `results/I1/Stage_3_Solving/compatibility_matrix.png`
+	- `results/I1/Stage_3_Solving/evaluation.txt`
+
+- **`I2`**
+	- `results/I2/Stage_1_Shuffling/original_cropped.jpg`
+	- `results/I2/Stage_1_Shuffling/shuffled_puzzle.jpg`
+	- `results/I2/Stage_2_Features/avg_tile_histogram.png`
+	- `results/I2/Stage_3_Solving/solved_puzzle.jpg`
+	- `results/I2/Stage_3_Solving/compatibility_matrix.png`
+	- `results/I2/Stage_3_Solving/evaluation.txt`
+
+- **`Io`**
+	- `results/Io/Stage_1_Shuffling/original_cropped.jpg`
+	- `results/Io/Stage_1_Shuffling/shuffled_puzzle.jpg`
+	- `results/Io/Stage_2_Features/avg_tile_histogram.png`
+	- `results/Io/Stage_3_Solving/solved_puzzle.jpg`
+	- `results/Io/Stage_3_Solving/compatibility_matrix.png`
+	- `results/Io/Stage_3_Solving/evaluation.txt`
+
+- **`Lena`**
+	- `results/Lena/Stage_1_Shuffling/original_cropped.jpg`
+	- `results/Lena/Stage_1_Shuffling/shuffled_puzzle.jpg`
+	- `results/Lena/Stage_2_Features/avg_tile_histogram.png`
+	- `results/Lena/Stage_3_Solving/solved_puzzle.jpg`
+	- `results/Lena/Stage_3_Solving/compatibility_matrix.png`
+	- `results/Lena/Stage_3_Solving/evaluation.txt`
 
 ### Ενδεικτικά Αποτελέσματα
 
